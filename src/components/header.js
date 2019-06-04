@@ -12,21 +12,26 @@ const Header = ({ siteLogo }) => (
     <div
       style={{
         margin: `0 auto`,
-        width: '100vw',
+        width: "100vw",
         padding: `1.45rem 1.0875rem`,
+        height: "15vh",
       }}
     >
-      <Link
+      {/* <Link
         to="/"
         style={{
           color: `white`,
           textDecoration: `none`,
-          width: '50px',
-          height: '50px',
+          width: "100px",
+          height: "70px",
         }}
       >
-        <img src={siteLogo} alt="logo" style={{ width: 'inherit', height: 'inherit' }} />
-      </Link>
+        <img
+          src={siteLogo}
+          alt="logo"
+          style={{ width: "inherit", height: "inherit" }}
+        />
+      </Link> */}
     </div>
   </header>
 )
