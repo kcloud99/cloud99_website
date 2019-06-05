@@ -20,10 +20,22 @@ const Overlay = styled.div`
   padding: 0;
   margin: 0;
   background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+`
+
+const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
 `
 
 const Project = props => {
   const { location } = props
+  if (!location.state) {
+    return <h1>Sorry this page doesn't seem to be working</h1>
+  }
   return (
     <Wrapper src={Background}>
       <Overlay>
@@ -44,11 +56,20 @@ const Project = props => {
         >
           <FiChevronsLeft size="4rem" />
         </AniLink>
-        <h2 style={{ width: "100%", textAlign: "center" }}>
-          {location.state.project
-            ? location.state.project.name
-            : "Not sure why... But cant retrieve name at this time"}
-        </h2>
+        <Column>
+          <h2 style={{ width: "100%", textAlign: "center" }}>
+            {location.state.project
+              ? location.state.project.name
+              : "Not sure why... But cant retrieve name at this time"}
+          </h2>
+        </Column>
+        <Column>
+          <h2 style={{ width: "100%", textAlign: "center" }}>
+            {location.state.project
+              ? location.state.project.name
+              : "Not sure why... But cant retrieve name at this time"}
+          </h2>
+        </Column>
       </Overlay>
     </Wrapper>
   )

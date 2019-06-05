@@ -24,6 +24,9 @@ const Overlay = styled.div`
 
 const Service = props => {
   const { location } = props
+  if (!location.state) {
+    return <h1>Sorry this page doesn't seem to be working</h1>
+  }
   return (
     <Wrapper src={Background}>
       <Overlay>
