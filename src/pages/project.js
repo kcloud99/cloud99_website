@@ -22,7 +22,7 @@ const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.85);
 `
 
-const Service = props => (
+const Project = props => (
   <Wrapper src={Background}>
     <Overlay>
       <SEO title="Service" />
@@ -43,10 +43,10 @@ const Service = props => (
         <FiChevronsLeft size="4rem" />
       </AniLink>
       <h2 style={{ width: "100%", textAlign: "center" }}>
-        {props.location.state.service.name}
+        {props.location.state.project.name}
       </h2>
     </Overlay>
   </Wrapper>
 )
 
-export default Service
+export default Project

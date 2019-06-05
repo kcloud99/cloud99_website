@@ -160,8 +160,35 @@ const Services = () => (
       <Section>
         <h3>Current Projects</h3>
         <Row>
-          {projects.map(s => {
-            return <Content>{s.name}</Content>
+          {projects.map(p => {
+            return (
+              <Content>
+                <Words>
+                  <h5>{p.name}</h5>
+                  <p>
+                    <strong>Type:</strong> {p.type}
+                  </p>
+                  <p>
+                    <strong>Stack:</strong> {p.stack}
+                  </p>
+                </Words>
+                <AniLink
+                  swipe
+                  top="entry"
+                  to="/project/"
+                  direction="left"
+                  state={{ project: p }}
+                  duration={1}
+                  style={{
+                    height: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <FiChevronRight size="3rem" />
+                </AniLink>
+              </Content>
+            )
           })}
         </Row>
         <AniLink swipe direction="down" to="/">
