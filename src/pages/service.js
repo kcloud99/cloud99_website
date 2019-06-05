@@ -23,7 +23,7 @@ const Overlay = styled.div`
 `
 
 const Service = props => {
-  const { service } = props.location.state
+  const { location } = props
   return (
     <Wrapper src={Background}>
       <Overlay>
@@ -45,8 +45,8 @@ const Service = props => {
           <FiChevronsLeft size="4rem" />
         </AniLink>
         <h2 style={{ width: "100%", textAlign: "center" }}>
-          {service
-            ? service.name
+          {location.state.service
+            ? location.state.service.name
             : "Not sure why... But cant retrieve name at this time"}
         </h2>
       </Overlay>
