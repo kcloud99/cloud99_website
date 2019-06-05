@@ -22,31 +22,36 @@ const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.85);
 `
 
-const Project = props => (
-  <Wrapper src={Background}>
-    <Overlay>
-      <SEO title="Service" />
-      <AniLink
-        swipe
-        top="entry"
-        to="/services/"
-        direction="right"
-        duration={1}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          position: "fixed",
-          top: "2vh",
-          left: "1vw",
-        }}
-      >
-        <FiChevronsLeft size="4rem" />
-      </AniLink>
-      <h2 style={{ width: "100%", textAlign: "center" }}>
-        {props.location.state.project.name}
-      </h2>
-    </Overlay>
-  </Wrapper>
-)
+const Project = props => {
+  const { project } = props.location.state
+  return (
+    <Wrapper src={Background}>
+      <Overlay>
+        <SEO title="Service" />
+        <AniLink
+          swipe
+          top="entry"
+          to="/services/"
+          direction="right"
+          duration={1}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            position: "fixed",
+            top: "2vh",
+            left: "1vw",
+          }}
+        >
+          <FiChevronsLeft size="4rem" />
+        </AniLink>
+        <h2 style={{ width: "100%", textAlign: "center" }}>
+          {project
+            ? project.name
+            : "Not sure why... But cant retrieve name at this time"}
+        </h2>
+      </Overlay>
+    </Wrapper>
+  )
+}
 
 export default Project
