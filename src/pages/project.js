@@ -103,7 +103,7 @@ const Project = props => {
         <Column>
           <h2 style={{ width: "100%", textAlign: "center" }}>
             {location.state.project ? (
-              <a href="https://www.tribepilot.com" target="_blank">
+              <a href={location.state.project.link} target="_blank">
                 <h2>{location.state.project.name}</h2>
                 <Image src={pic} />
               </a>
