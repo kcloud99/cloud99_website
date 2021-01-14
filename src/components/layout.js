@@ -5,22 +5,36 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react";
-import PropTypes from "prop-types";
-import { StaticQuery, graphql } from "gatsby";
-import styled from 'styled-components';
+import React from "react"
+import PropTypes from "prop-types"
+import { StaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
 
-import Logo from '../images/gatsby-icon.png';
-import Background from '../images/hero.jpg';
+import Logo from "../images/logo.png"
+import Background from "../images/hero.jpg"
 
-import Header from "./header";
-import "./layout.css";
+import Header from "./header"
+import "./layout.css"
 
 const Wrapper = styled.div`
   background-image: url(${props => props.src});
+  background-size: cover;
+  background-position: center;
   width: 100vw;
   height: 100vh;
-`;
+`
+
+const Overlay = styled.div`
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(11, 77, 138, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -35,29 +49,13 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <Wrapper src={Background}>
-        <Header siteLogo={Logo} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: '100vw',
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
+        <Overlay>
+          {/* <Header /> */}
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div>
+        </Overlay>
       </Wrapper>
     )}
   />
 )
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Layout
