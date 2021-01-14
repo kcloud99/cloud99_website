@@ -6,8 +6,8 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import SEO from "../components/seo"
 import Background from "../images/desk1.jpg"
 import tribePilot from "../images/tribepilot.png"
-import pickup from "../images/pickup.png"
-import nscale from "../images/nscale.png"
+import pickup from "../images/tribepilot.png"
+import nscale from "../images/tribepilot.png"
 
 const Wrapper = styled.div`
   background-image: url(${props => props.src});
