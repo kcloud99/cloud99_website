@@ -1,35 +1,39 @@
 import React from "react"
-import PropTypes from "prop-types"
 import styled from "styled-components"
 
 const Wrap = styled.div`
-  width: 100%;
-  height: 40vh;
+  width: 50vw;
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding-right: 15vw;
+  justify-content: center;
+  align-items: ${({align}) => (align === "left" ? "flex-start" : "flex-end")};
+  padding: ${({align}) => (align === "left" ? "0 0 0 10vw" : "0 15vw 0 0")};
   margin: auto auto;
+  font-family: 'Permanent Marker', cursive;
 `
 
 const Tit = styled.h1`
-  font-size: 3rem;
+  font-size: 3.3rem;
   color: inherit;
-  font-family: sans serif;
+  width: auto;
+  font-family: 'Permanent Marker', cursive;
 `
 
 const Desc = styled.h2`
-  font-size: 2rem;
-  color: inherit;
-  font-family: sans serif;
+  font-size: 2.3rem;
+  color: pink;
+  width: auto;
+  text-align: ${({align}) => (align === "left" ? "flex-start" : "flex-end")};
+  font-family: 'Permanent Marker', cursive;
+  line-height: 3rem;
 `
 
-function Title(props) {
+function Title({ title, description, align }) {
   return (
-    <Wrap>
-      <Tit>Cloud99</Tit>
-      <Desc>Design & Consulting</Desc>
+    <Wrap align={align}>
+      <Tit>{title}</Tit>
+      <Desc align={align}>{description}</Desc>
     </Wrap>
   )
 }

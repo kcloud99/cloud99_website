@@ -1,22 +1,14 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import styled from 'styled-components'
+
+const Wrap = styled.header`
+  background: transparent;
+  margin: 0;
+`
 
 const Header = ({ siteLogo }) => (
-  <header
-    style={{
-      background: `transparent`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        width: "100vw",
-        padding: `1.45rem 1.0875rem`,
-        height: "15vh",
-      }}
-    >
+  <Wrap>
       {/* <Link
         to="/"
         style={{
@@ -32,16 +24,7 @@ const Header = ({ siteLogo }) => (
           style={{ width: "inherit", height: "inherit" }}
         />
       </Link> */}
-    </div>
-  </header>
+  </Wrap>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
-import Logo from "../images/mylogo.png"
+import Logo from "../images/logo.png"
 import Background from "../images/hero.jpg"
 
 import Header from "./header"
@@ -29,7 +29,11 @@ const Overlay = styled.div`
   height: 100vh;
   padding: 0;
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(11, 77, 138, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 `
 
 const Layout = ({ children }) => (
@@ -46,25 +50,12 @@ const Layout = ({ children }) => (
     render={data => (
       <Wrapper src={Background}>
         <Overlay>
-          <Header />
-          <div
-            style={{
-              margin: `0 auto`,
-              maxWidth: "100vw",
-              padding: `0px 1.0875rem 1.45rem`,
-              paddingTop: 0,
-            }}
-          >
-            <main>{children}</main>
-          </div>
+          {/* <Header /> */}
+          <main>{children}</main>
         </Overlay>
       </Wrapper>
     )}
   />
 )
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Layout

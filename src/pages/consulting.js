@@ -1,37 +1,154 @@
 import React from 'react';
 import styled from 'styled-components'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import { FiChevronsUp } from "react-icons/fi"
+import { FiChevronsUp, FiChevronsDown } from "react-icons/fi"
+import Layout from "../components/layout"
+import Title from "../components/Title"
+import SEO from "../components/seo"
 
-const Wrapper = styled.div`
+const Wrap = styled.div`
+  display: flex;
+  height: auto;
   width: 100vw;
-  height: 100vh;
+  margin: 0;
+  margin-top: 20vh;
+  padding: 0;
+`
 
-  .arrow-down {
-    width: 0;
-    height: 0;
-    border-left: 50vw solid transparent;
-    border-right: 50vw solid transparent;
+const Services = styled.div`
+  width: 50vw;
+  height: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Mitr', san-serif;
+  text-align: center;
+  color: black;
 
-    border-top: 100vh solid #3cb4cf;
+  .container {
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      margin-left: 10px;
+      text-align: left;
+    }
+
+    h1 {
+      font-weight: 500;
+      font-size: 2.5rem;
+    }
+    h3 {
+      font-weight: 300;
+      padding-left: 0;
+      margin-left: 10px;
+      text-align: left;
+    }
+
+    .group {
+      list-style-type: '✔️';
+      pading-inline-start: 0;
+      margin-bottom: 0;
+
+      &:nth-child(2) {
+        margin-top: 40px;
+      }
+    }
+    .subgroup {
+
+      li::marker {
+        content: '◇';
+        font-size: 1.5rem;
+      }
+    }
   }
 
-  .up-button {
-    position: absolute;
-    top: 3%;
-    left: 47%;
+  button {
+    width: auto;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: transparent;
+    border-color: black;
+    font-weight: 300;
+    color: black;
+    margin: 0 auto;
+    font-family: 'Mitr', san-serif;
+    margin-top: 20px;
+    cursor: pointer;
   }
 `
 
 const ConsultingPage = () => (
-  <Wrapper>
-    <div className="arrow-down" />
-    <div className="up-button">
-      <AniLink cover direction="down" to="/" duration={3} bg="#3cb4cf">
-        <FiChevronsUp size="4rem" style={{ margin: "0 auto" }} />
+  <Layout>
+    <SEO title="consulting" />
+    <div
+      style={{
+        width: "100%",
+        height: "auto",
+        display: "flex",
+        justifyContent: "center",
+        position: "fixed",
+        top: "3%",
+      }}
+    >
+      <AniLink swipe direction="down" to="/">
+        <FiChevronsUp size="4rem" style={{ margin: "10px auto" }} />
       </AniLink>
     </div>
-  </Wrapper>
+    <Wrap>
+      <Title title="It starts here" description="Expand your business. Increase your efficiency. Finally master your tech." align="left" />
+      <Services>
+        <div className="container">
+          <h1>Here to help...</h1>
+          <ul>
+            <li className="group">
+              <h3>Expand your online presence:</h3>
+              <ul className="subgroup">
+                <li><p>Website Design</p></li>
+                <li><p>E-Commerce Store</p></li>
+                <li><p>Lead Generation</p></li>
+              </ul>
+            </li>
+            <li className="group">
+              <h3>Optimize your systems:</h3>
+              <ul className="subgroup">
+                <li><p>Increase internal efficiency</p></li>
+                <li><p>Automate internal systems</p></li>
+                <li><p>Save man-hours and money</p></li>
+              </ul>
+            </li>
+          </ul>
+          <AniLink swipe direction="up" to="/signup" style={{zIndex: 99}}>
+            <button>Signup Now</button>
+          </AniLink>
+        </div>
+      </Services>
+    </Wrap>
+    <div
+      style={{
+        width: "100%",
+        height: "auto",
+        display: "flex",
+        justifyContent: "center",
+        position: "fixed",
+        top: "87%",
+      }}
+    >
+      <AniLink swipe direction="up" to="/testimonials">
+        <FiChevronsDown size="4rem" style={{ margin: "10px auto" }} />
+      </AniLink>
+    </div>
+  </Layout>
 );
 
 export default ConsultingPage
