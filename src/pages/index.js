@@ -1,11 +1,9 @@
 import React from "react"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styled from 'styled-components'
-
 import Layout from "../components/layout"
 import Title from "../components/Title"
 import SEO from "../components/seo"
-import { FiChevronsDown } from "react-icons/fi"
+import PageNavBtn from '../components/PageNavBtn'
 
 const Wrap = styled.div`
   display: flex;
@@ -65,9 +63,9 @@ const IndexPage = () => (
         <h1>Unlock your business' potential:</h1>
         <h2>Sign up today for a call that could change your business forever</h2>
         <h3>In 15 minutes - find that missing piece</h3>
-        <AniLink swipe direction="up" to="/signup">
+        <PageNavBtn direction="up" route="/signup">
           <button>Signup Now</button>
-        </AniLink>
+        </PageNavBtn>
       </Signup>
       <Title title="Cloud99" description="Designs & Consulting" />
     </Wrap>
@@ -81,9 +79,7 @@ const IndexPage = () => (
         top: "85%",
       }}
     >
-      <AniLink swipe direction="up" to="/consulting">
-        <FiChevronsDown size="4rem" style={{ margin: "0 auto" }} />
-      </AniLink>
+      <PageNavBtn direction="up" route="/consulting" />
     </div>
   </Layout>
 )

@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components'
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import { FiChevronsUp, FiChevronsDown } from "react-icons/fi"
 import Layout from "../components/layout"
 import Title from "../components/Title"
 import SEO from "../components/seo"
+import PageNavBtn from '../components/PageNavBtn'
 
 const Wrap = styled.div`
   display: flex;
@@ -101,9 +100,7 @@ const ConsultingPage = () => (
         top: "3%",
       }}
     >
-      <AniLink swipe direction="down" to="/">
-        <FiChevronsUp size="4rem" style={{ margin: "10px auto" }} />
-      </AniLink>
+      <PageNavBtn direction="down" route="/" />
     </div>
     <Wrap>
       <Title title="It starts here" description="Expand your business. Increase your efficiency. Finally master your tech." align="left" />
@@ -128,9 +125,9 @@ const ConsultingPage = () => (
               </ul>
             </li>
           </ul>
-          <AniLink swipe direction="up" to="/signup" style={{zIndex: 99}}>
+          <PageNavBtn direction="up" route="/signup" style={{zIndex: 99}}>
             <button>Signup Now</button>
-          </AniLink>
+          </PageNavBtn>
         </div>
       </Services>
     </Wrap>
@@ -144,9 +141,7 @@ const ConsultingPage = () => (
         top: "87%",
       }}
     >
-      <AniLink swipe direction="up" to="/testimonials">
-        <FiChevronsDown size="4rem" style={{ margin: "10px auto" }} />
-      </AniLink>
+      <PageNavBtn direction="up" route="/testimonials" />
     </div>
   </Layout>
 );

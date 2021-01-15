@@ -21,12 +21,12 @@ const Wrapper = styled.div`
   background-size: cover;
   background-position: center;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 `
 
 const Overlay = styled.div`
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   padding: 0;
   margin: 0;
   background-color: rgba(11, 77, 138, 0.6);
