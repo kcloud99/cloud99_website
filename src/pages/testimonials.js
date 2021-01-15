@@ -107,7 +107,7 @@ const TestimonialsPage = () => (
           </li>
         </ul>
         <PageNavBtn direction="up" route="/signup">
-          <button>Signup Now</button>
+          <button>Ready to talk?</button>
         </PageNavBtn>
       </Services>
       <Title title="A few others..." description="Who have taken the leap" align="left" />

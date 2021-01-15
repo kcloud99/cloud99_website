@@ -64,7 +64,7 @@ const IndexPage = () => (
         <h2>Sign up today for a call that could change your business forever</h2>
         <h3>In 15 minutes - find that missing piece</h3>
         <PageNavBtn direction="up" route="/signup">
-          <button>Signup Now</button>
+          <button>Let's talk</button>
         </PageNavBtn>
       </Signup>
       <Title title="Cloud99" description="Designs & Consulting" />

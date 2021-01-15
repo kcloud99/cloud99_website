@@ -27,7 +27,7 @@ const Wrapper = styled.div`
 const Overlay = styled.div`
   width: 100vw;
   min-height: 100vh;
-  padding: 0;
+  padding: 10px 0;
   margin: 0;
   background-color: rgba(11, 77, 138, 0.6);
   display: flex;
