@@ -15,7 +15,7 @@ const TopBtn = styled.div`
 const Title = styled.div`
   width: 80vw;
   height: auto;
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Kalam', cursive;
   text-align: center;
   margin: 0 auto;
   margin-top: 10vh;
@@ -23,13 +23,13 @@ const Title = styled.div`
   h1 {
     font-size: 3rem;
     color: white;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Comic Neue', cursive;
   }
   h2 {
     font-size: 2rem;
     color: pink;
     line-height: 2.8rem;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Architects Daughter', cursive;
   }
 `
 const InputGroup = styled.form`
@@ -45,7 +45,7 @@ const Input = styled.input`
   width: 100%;
   border: none;
   border-bottom: 2px solid white;
-  font-family: 'Mitr', san-serif;
+  font-family: 'Comic Neue', cursive;
   padding: 10px;
   padding-left: 50px;
   background: transparent;
@@ -68,7 +68,7 @@ const Button = styled.button`
   font-weight: 300;
   color: white;
   margin: 0 auto;
-  font-family: 'Mitr', san-serif;
+  font-family: 'Comic Neue', cursive;
   margin-top: 20px;
   cursor: pointer;
 `
@@ -92,7 +92,7 @@ const Note = styled.div`
     font-weight: 300;
     text-align: center;
     line-height: 2rem;
-    font-family: 'Mitr', san-serif;
+    font-family: 'Comic Neue', cursive;
     margin: 0;
   }
 `

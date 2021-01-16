@@ -17,7 +17,8 @@ const Tit = styled.h1`
   font-size: 3.3rem;
   color: inherit;
   width: auto;
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Kalam', cursive;
+  font-weight: 400;
 `
 
 const Desc = styled.h2`
@@ -25,8 +26,9 @@ const Desc = styled.h2`
   color: pink;
   width: auto;
   text-align: ${({align}) => (align === "left" ? "flex-start" : "flex-end")};
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Architects Daughter', cursive;
   line-height: 3rem;
+  font-weight: 400;
 `
 
 function Title({ title, description, align }) {

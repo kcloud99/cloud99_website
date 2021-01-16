@@ -22,7 +22,7 @@ const Services = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Mitr', san-serif;
+  font-family: 'Comic Neue', cursive;
   text-align: center;
   color: black;
 
@@ -45,16 +45,18 @@ const Services = styled.div`
     h1 {
       font-weight: 500;
       font-size: 2.5rem;
+      font-family: 'Comic Neue', cursive;
     }
     h3 {
       font-weight: 300;
       padding-left: 0;
       margin-left: 10px;
       text-align: left;
+      font-family: 'Comic Neue', cursive;
     }
 
     .group {
-      list-style-type: '✔️';
+      list-style-type: none;
       pading-inline-start: 0;
       margin-bottom: 0;
 
@@ -65,7 +67,7 @@ const Services = styled.div`
     .subgroup {
 
       li::marker {
-        content: '◇';
+        ${'' /* content: '◇'; */}
         font-size: 1.5rem;
       }
     }
@@ -81,7 +83,7 @@ const Services = styled.div`
     font-weight: 300;
     color: black;
     margin: 0 auto;
-    font-family: 'Mitr', san-serif;
+    font-family: 'Comic Neue', cursive;
     margin-top: 20px;
     cursor: pointer;
   }

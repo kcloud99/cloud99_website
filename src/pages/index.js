@@ -21,21 +21,23 @@ const Signup = styled.div`
   padding-right: 5%;
   display: flex;
   flex-direction: column;
-  font-family: 'Mitr', san-serif;
+  font-family: 'Comic Neue', cursive;
   text-align: center;
 
   h1 {
     font-weight: 200;
     font-size: 2.5rem;
+    font-family: 'Comic Neue', cursive;
   }
   h2 {
     font-weight: 600;
     font-size: 1.65rem;
     line-height: 2.5rem;
     color: pink;
+    font-family: 'Comic Neue', cursive;
   }
   h3 {
-    font-family: 'Mitr', san-serif;
+    font-family: 'Comic Neue', cursive;
     font-weight: 300;
     font-size: 1.3rem;
   }
@@ -49,7 +51,7 @@ const Signup = styled.div`
     font-weight: 300;
     color: white;
     margin: 0 auto;
-    font-family: 'Mitr', san-serif;
+    font-family: 'Comic Neue', cursive;
     margin-top: 20px;
     cursor: pointer;
   }
